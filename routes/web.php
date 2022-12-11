@@ -15,8 +15,8 @@ use App\Http\Controllers\ControllerAuth;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return "welcome";
 }); 
 
-// Route::get('/', [ControllerAuth::class, 'login']);
-Route::get('/register', [ControllerAuth::class, 'register']);
+Route::get('/login', [ControllerAuth::class, "auth.login"]);
+Route::get('/register', [ControllerAuth::class, "auth.register"]);
